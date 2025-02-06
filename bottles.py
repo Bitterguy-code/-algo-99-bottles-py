@@ -1,17 +1,17 @@
-# 99 bottles of beer on the wall, 99 bottles of beer.
-# Take one down and pass it around, 98 bottles of beer on the wall.
-# 98 bottles of beer on the wall, 98 bottles of beer.
+bottles = int(input("Enter how many bottles you want: "))
 
-def bottle_song():
-	for i in range(99,0,-1):
-		if i > 1:
-			print(str(i) + " bottles of beer on the wall, " + str(i) + " bottles of beer.")
-			print("Take on down and pass it around, " + str(i-1) + " bottles of beer on the wall.")
-		else:
-			print(str(i) + " bottles of beer on the wall, " + str(i) + " bottles of beer.")
-			print("Take on down and pass it around, no more bottles of beer on the wall.")
-	pass
+def bottle_song(max):
+	if max > 1:
+		print(str(max) + " bottles of bear on the wall, " + str(max) + " bottles of beer.")
+		print("Take one down, pass it around " + str(max-1) + " bottles of beer on the wall")
+		bottle_song(max-1)
+	elif max == 1:
+		print(str(max) + " bottles of bear on the wall, " + str(max) + " bottles of beer.")
+		print("Take one down, pass it around no more bottles of beer on the wall")
+		bottle_song(max-1)
+	elif max == 0:
+		pass
+	
 
-bottle_song()
+bottle_song(bottles)
 
-####kldjsfalkfdajalskdfjdfls
