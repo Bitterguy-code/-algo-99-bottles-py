@@ -4,8 +4,12 @@
 
 def bottle_song():
 	for i in range(99,0,-1):
-		print(str(i) + " bottles of beer on the wall, " + str(i) + " bottles of beer.")
-		print("Take on down and pass it around, " + str(i-1) + " bottles of beer on the wall.")
+		if i > 1:
+			print(str(i) + " bottles of beer on the wall, " + str(i) + " bottles of beer.")
+			print("Take on down and pass it around, " + str(i-1) + " bottles of beer on the wall.")
+		else:
+			print(str(i) + " bottles of beer on the wall, " + str(i) + " bottles of beer.")
+			print("Take on down and pass it around, no more bottles of beer on the wall.")
 	pass
 
 bottle_song()
